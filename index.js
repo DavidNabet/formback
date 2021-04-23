@@ -32,13 +32,13 @@ app.post("/form", (req, res) => {
 
       mailgun.messages().send(data, (error, body) => {
         if (!error) {
-          console.log(body);
+          //   console.log(body);
           res.status(203).json({
             confirmation: "success",
             message: "Données reçues, mail envoyé !",
           });
         }
-        console.log(error);
+        // console.log(error);
         res.status(401).json(error);
       });
     }
