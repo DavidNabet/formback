@@ -14,7 +14,7 @@ const mailgun = require("mailgun-js")({
 });
 
 app.get("/", (req, res) => {
-  res.json("Hello");
+  res.json("Hello, welcome to the part backend");
 });
 
 app.post("/form", (req, res) => {
