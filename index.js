@@ -51,6 +51,6 @@ app.all("*", (req, res) => {
   res.status(400).json({ message: "All routes" });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server listen");
 });
