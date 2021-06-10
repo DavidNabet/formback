@@ -30,7 +30,9 @@ app.post("/form", (req, res) => {
         text: message,
       };
 
-      mailgun.messages().send(data, (error, body) => {
+      console.log(data);
+
+      /*      mailgun.messages().send(data, (error, body) => {
         if (!error) {
           //   console.log(body);
           res.status(203).json({
@@ -40,7 +42,7 @@ app.post("/form", (req, res) => {
         }
         // console.log(error);
         res.status(401).json(error);
-      });
+      }); */
     }
   } catch (err) {
     res.status(400).json({ error: err.message });
